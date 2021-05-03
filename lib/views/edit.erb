@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>The Gossip Project</title>
+    </head>
+    <body>
+        <h1>Modifer un gossip</h1>
+        <p>Balance ton potin via le formulaire ci-dessous</p>
+        <form action='/gossips/<%= id %>/edit/' method='POST'>
+            Saisis ici ton nom : <input type='text' name='gossip_author'/>
+            <br/><br/>
+            Balance ton potin : <input type='text' name='gossip_content'/>
+            <br/><br/>
+            <input type='submit'/>
+        </form>
+        <a href="/">Accueil</a>
+    </body>
+</html>
