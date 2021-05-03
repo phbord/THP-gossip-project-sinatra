@@ -23,14 +23,15 @@
             <br/>
             <br/>
             <p>Ajoute un commentaire :</p>
-            <input type='text' name='gossip_comment'/>
+            <textarea name='gossip_comment'></textarea>
             <br/><br/>
             <input type='submit'/>
         </form>
 
         <br/>
         <p>
-            <a href="/">Accueil</a>
+            <a href="/">Accueil</a><br/>
+            <a href="/gossips/<%= id %>/edit/">éditer le potin</a><br/>
             <a href="/gossips/new/">Ajouter un potin</a>
         </p>
     </body>

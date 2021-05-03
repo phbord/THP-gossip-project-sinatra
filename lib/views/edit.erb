@@ -6,12 +6,13 @@
         <h1>Modifer un gossip</h1>
         <p>Balance ton potin via le formulaire ci-dessous</p>
         <form action='/gossips/<%= id %>/edit/' method='POST'>
-            Saisis ici ton nom : <input type='text' name='gossip_author'/>
+            Saisis ici ton nom : <input type='text' name='gossip_author' value='<%= gossips[id].author %>'/>
             <br/><br/>
-            Balance ton potin : <input type='text' name='gossip_content'/>
+            Balance ton potin : <input type='text' name='gossip_content' value='<%= gossips[id].content %>'/>
             <br/><br/>
             <input type='submit'/>
         </form>
-        <a href="/">Accueil</a>
+        <a href="/">Accueil</a><br/>
+        <a href="/gossips/<%= id %>/">Voir le potin</a>
     </body>
 </html>

@@ -20,9 +20,6 @@ class ApplicationController < Sinatra::Base
     #Affichage d'un gossip (par id)
     get '/gossips/:id/' do
         id = params['id'].to_i
-        p "-"*12
-        p Gossip.all_comments[1]
-        p "-"*12
         erb:show, locals:{gossip: Gossip.find(id), id: id, comments: Gossip.all_comments}
     end
 
@@ -36,7 +33,8 @@ class ApplicationController < Sinatra::Base
     #Modification d'un gossip (par id)
     get '/gossips/:id/edit/' do
         id = params['id'].to_i
-        erb:edit, locals:{id:id}
+        gossips = Gossip.all
+        erb:edit, locals:{id:id, gossips:gossips}
     end
 
     #raitement du formulaire nouvreau gossip pour la modification d'un gossip (par id)
