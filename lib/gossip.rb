@@ -58,17 +58,8 @@ class Gossip
 
     #Ajoute un commentaire
     def self.comment(id, comment)
-        # id = id.to_i
-        # id = id
-        # table = CSV.table("db/gossip.csv")
-        # table[id][table[id].count] = comment
-        # File.open("db/gossip.csv", "w") do |f|
-        #     f.write(table.to_csv)
-        # end
-
         CSV.open('./db/comment.csv', 'ab') do |csv|
             csv << [id.to_i, comment]
-            #puts "Contenu et auteur sauvegardé !".colorize(:green)
         end
     end
 end
